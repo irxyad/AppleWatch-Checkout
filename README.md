@@ -1,5 +1,5 @@
 # E-Commerce App
-#### Watch detail page design concept
+#### Apple Watch Checkout Page
 
 Hello folks🙌
 ###### TESTED ON ANDROID 12L
