@@ -1,0 +1,4 @@
+#Tue Jan 31 14:44:58 SGT 2023
+base.0=F\:\\Coding\\Apple\\review_apple_watch\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

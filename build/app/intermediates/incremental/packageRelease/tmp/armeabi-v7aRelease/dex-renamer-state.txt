@@ -1,0 +1,4 @@
+#Mon Oct 31 04:09:34 SGT 2022
+base.0=E\:\\Coding\\Apple\\review_apple_watch\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

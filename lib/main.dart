@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:review_apple_watch/constanta.dart';
-import 'package:review_apple_watch/global_provider.dart';
-import 'package:review_apple_watch/screens/detail_page.dart';
-import 'package:review_apple_watch/widget/appbar.dart';
+import 'package:review_apple_watch/app/utils/global_provider.dart';
+import 'app/utils/constanta.dart';
+import 'app/screens/detail_page.dart';
+import 'app/widget/appbar.dart';
 
 void main() {
   runApp(MultiProvider(
@@ -17,12 +17,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations(
-        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle().copyWith(
-        statusBarIconBrightness: Brightness.dark,
-        statusBarBrightness: Brightness.dark,
-        statusBarColor: Colors.transparent));
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
@@ -30,14 +26,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
   final String title = "Apple Watch Series 6";
 
   @override
@@ -45,11 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return ListenableProvider<GlobalProvider>(
       create: (context) => GlobalProvider(),
       builder: (context, _) => AnnotatedRegion(
-        value: const SystemUiOverlayStyle(
-            systemNavigationBarContrastEnforced: true,
-            systemNavigationBarDividerColor: Colors.transparent,
-            systemNavigationBarIconBrightness: Brightness.dark,
-            systemNavigationBarColor: yellow),
+        value: const SystemUiOverlayStyle(systemNavigationBarColor: yellow),
         child: Scaffold(
           backgroundColor: white,
           appBar: PreferredSize(
